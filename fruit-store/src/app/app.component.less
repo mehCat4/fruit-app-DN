@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+}
+
+.main-container {
+  min-height: 100vh;  /*This will cover 100% of the viewport*/
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 100px;  /*This is the height of the footer*/
+}
+
+.app-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
