@@ -1,0 +1,10 @@
+<h1>fruit-details works!</h1>
+
+<div *ngFor="let fruit of fruits">
+  <h2>{{fruit.name}}</h2>
+  <p>Type: {{fruit.type}}</p>
+  <p>Description {{fruit.description}}</p>
+  <p>Current price is {{fruit.price | currency}}</p>
+</div>
+
+<button (click)="goBack()">Click here to go back to the home page</button>

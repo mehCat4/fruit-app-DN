@@ -3,17 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ApplesComponent } from './apples/apples.component';
 import {FormsModule} from "@angular/forms";
 import { HeaderComponent } from './core-components/header/header.component';
 import { FooterComponent } from './core-components/footer/footer.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { FruitDetailsComponent } from './fruit-details/fruit-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ApplesComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HomePageComponent,
+    FruitDetailsComponent
   ],
   imports: [
     BrowserModule,
