@@ -8,6 +8,7 @@ import { HeaderComponent } from './core-components/header/header.component';
 import { FooterComponent } from './core-components/footer/footer.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FruitDetailsComponent } from './fruit-details/fruit-details.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FruitDetailsComponent } from './fruit-details/fruit-details.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

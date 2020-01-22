@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Fruit } from "../fruit";
+import { FruitService } from "../fruit.service";
 
 @Component({
   selector: 'app-home-page',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.less']
 })
 export class HomePageComponent implements OnInit {
+  fruits: Fruit[];
 
-  constructor() { }
+  constructor(
+    private fruitService: FruitService
+  ) { }
 
   ngOnInit() {
+    this.getFruits();
   }
 
+  // Functions declared here
+  getFruits(): void {
+    this.fruitService.getFruits()
+      .subscribe(fruits => this.fruits)
+  }
 }

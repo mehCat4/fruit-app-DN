@@ -4,3 +4,10 @@
 <nav>
   <a routerLink="/fruit-details">Click here to go the all fruit details</a>
 </nav>
+
+<a *ngFor="let fruit of fruits" routerLink="/detail/{{fruit.id}}">
+  <div>
+    <h4>{{fruit.name}}</h4>
+  </div>
+
+</a>
