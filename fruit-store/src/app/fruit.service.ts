@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable, of} from "rxjs";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {catchError, map, tap} from "rxjs/operators";
 import {Fruit} from "./fruit";
 
@@ -9,7 +9,7 @@ import {Fruit} from "./fruit";
 })
 export class FruitService {
   // Variables declared here
-  private fruitsURL = 'mock-fruits';
+  private fruitsURL = 'api/fruits';
   httpOptions = {
     headers: new HttpHeaders({'Content-Type' : 'application/json'})
   };
@@ -20,8 +20,11 @@ export class FruitService {
 
   // Functions declared here
   /** GET fruits from the server*/
-  getFruits () : Observable<Fruit[]> {
-    return this.http.get<Fruit[]>(this.fruitsURL);
+  getFruits (): Observable<Fruit[]> {
+    return this.http.get<Fruit[]>(this.fruitsURL)
+      .pipe(
+        catchError(this.handleError<Fruit[]>('getFruits', []))
+      );
   }
 
   /** GET the fruit by ID from the server*/

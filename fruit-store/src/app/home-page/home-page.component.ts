@@ -8,19 +8,19 @@ import { FruitService } from "../fruit.service";
   styleUrls: ['./home-page.component.less']
 })
 export class HomePageComponent implements OnInit {
-  fruits: Fruit[];
+  fruits: Fruit[] = [];
 
   constructor(
     private fruitService: FruitService
   ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getFruits();
   }
 
   // Functions declared here
   getFruits(): void {
     this.fruitService.getFruits()
-      .subscribe(fruits => this.fruits)
+      .subscribe(fruits => this.fruits = fruits)
   }
 }

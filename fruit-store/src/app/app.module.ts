@@ -9,6 +9,8 @@ import { FooterComponent } from './core-components/footer/footer.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FruitDetailsComponent } from './fruit-details/fruit-details.component';
 import {HttpClientModule} from "@angular/common/http";
+import { HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
+import {InMemoryDataService} from "./in-memory-data.service";
 
 @NgModule({
   declarations: [
@@ -22,7 +24,10 @@ import {HttpClientModule} from "@angular/common/http";
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
