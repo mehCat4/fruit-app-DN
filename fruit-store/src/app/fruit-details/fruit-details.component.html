@@ -1,6 +1,6 @@
 <h1>fruit-details works!</h1>
 
-<div *ngFor="let fruit of fruits">
+<div *ngIf="fruit">
   <h2>{{fruit.name}}</h2>
   <p>Type: {{fruit.type}}</p>
   <p>Description {{fruit.description}}</p>
