@@ -1,11 +1,11 @@
-<p>home-page works!</p>
-<h1>Welcome to the fruit store!</h1>
-
-<app-fruit-search></app-fruit-search>
+<div class="center-main-content">
+  <app-fruit-search></app-fruit-search>
 
 
-<div>
-  <a *ngFor="let fruit of fruits" routerLink="/fruit-details/{{fruit.name}}">
-    <div>{{fruit.name}}</div>
-  </a>
+  <div>
+    <a *ngFor="let fruit of fruits" routerLink="/fruit-details/{{fruit.name}}">
+      <div>{{fruit.name}}</div>
+    </a>
+  </div>
 </div>
+
