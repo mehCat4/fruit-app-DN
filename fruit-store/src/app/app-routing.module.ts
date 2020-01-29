@@ -13,7 +13,7 @@ const routes: Routes = [
 
   // Fruit details
   {
-    path: 'fruit-details/:name',
+    path: 'fruit-details/:id',
     component: FruitDetailsComponent,
   },
   // Default path takes you to home page

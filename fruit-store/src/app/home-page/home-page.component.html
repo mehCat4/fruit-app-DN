@@ -1,14 +1,11 @@
 <p>home-page works!</p>
 <h1>Welcome to the fruit store!</h1>
 
-<nav>
-  <a routerLink="/fruit-details">Click here to go the all fruit details</a>
-</nav>
+<app-fruit-search></app-fruit-search>
+
 
 <div>
   <a *ngFor="let fruit of fruits" routerLink="/fruit-details/{{fruit.name}}">
     <div>{{fruit.name}}</div>
   </a>
 </div>
-
-<app-fruit-search></app-fruit-search>
