@@ -5,7 +5,7 @@
 
   <ul>
     <li *ngFor="let fruit of fruits$ | async">
-      <a routerLink="/detail/{{fruit.name}}">
+      <a routerLink="/fruit-details/{{fruit.name}}">
         {{fruit.name}}
       </a>
     </li>
