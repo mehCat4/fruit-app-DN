@@ -11,6 +11,7 @@ import { FruitDetailsComponent } from './fruit-details/fruit-details.component';
 import {HttpClientModule} from "@angular/common/http";
 import { HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
 import {InMemoryDataService} from "./in-memory-data.service";
+import { FruitSearchComponent } from './fruit-search/fruit-search.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {InMemoryDataService} from "./in-memory-data.service";
     HeaderComponent,
     FooterComponent,
     HomePageComponent,
-    FruitDetailsComponent
+    FruitDetailsComponent,
+    FruitSearchComponent
   ],
   imports: [
     BrowserModule,
