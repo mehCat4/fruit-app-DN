@@ -15,5 +15,14 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
+  openSidenav() {
+    document.getElementById("fruitSidenav").style.width = "250px";
+    document.getElementById("").style.marginLeft = "250px";
+  }
+
+  closeSidenav() {
+    document.getElementById("fruitSidenav").style.width = "0";
+    document.getElementById("").style.marginLeft = "0";
+  }
 
 }

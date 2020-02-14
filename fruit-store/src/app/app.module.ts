@@ -12,6 +12,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
 import {InMemoryDataService} from "./in-memory-data.service";
 import { FruitSearchComponent } from './fruit-search/fruit-search.component';
+import { SidenavComponent } from './core-components/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FruitSearchComponent } from './fruit-search/fruit-search.component';
     FooterComponent,
     HomePageComponent,
     FruitDetailsComponent,
-    FruitSearchComponent
+    FruitSearchComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,

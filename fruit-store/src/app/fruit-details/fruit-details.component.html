@@ -1,10 +1,11 @@
-<h1>fruit-details works!</h1>
+<div class="fruit-details-content">
+  <div *ngIf="fruit">
+    <h2>{{fruit.name}}</h2>
+    <p>Type: {{fruit.type}}</p>
+    <p>Description {{fruit.description}}</p>
+    <p>Current price is {{fruit.price | currency}}</p>
+  </div>
 
-<div *ngIf="fruit">
-  <h2>{{fruit.name}}</h2>
-  <p>Type: {{fruit.type}}</p>
-  <p>Description {{fruit.description}}</p>
-  <p>Current price is {{fruit.price | currency}}</p>
+  <button (click)="goBack()">Click here to go back to the home page</button>
 </div>
 
-<button (click)="goBack()">Click here to go back to the home page</button>
